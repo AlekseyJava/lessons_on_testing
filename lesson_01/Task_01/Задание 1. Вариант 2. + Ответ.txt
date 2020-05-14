@@ -1,0 +1,3 @@
+Получить значение из json: Eugene Astafiev
+
+$.items[13].owner.display_name

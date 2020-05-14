@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\aiteco\lessons\lesson_01\Task_03\tests\UC01_WorkWithMethods
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ee:\aiteco\lessons\lesson_01\task_03\tests\uc01_workwithmethods\\logfile.log
+e:\aiteco\lessons\lesson_01\task_03\tests\uc01_workwithmethods\\combined_UC01_WorkWithMethods.c
+e:\aiteco\lessons\lesson_01\task_03\tests\uc01_workwithmethods\\pre_cci.c

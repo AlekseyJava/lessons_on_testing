@@ -1,0 +1,11 @@
+[t1]
+SnapshotXmlFile=snapshot_1.xml
+ContentType=text/html
+StepName=Url: statistics_3
+Total=0
+RequestHeaderFile=t1_RequestHeader.txt
+ResponseHeaderFile=t1_ResponseHeader.txt
+RawStepEndTime=1589430221368
+RawStepName=statistics_3
+RequestBodyFile=t1_RequestBody.txt
+RawStepStartTime=1589430221166

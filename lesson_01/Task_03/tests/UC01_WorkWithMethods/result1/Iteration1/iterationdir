@@ -1,0 +1,10 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[Action]
+SnapshotIndex=I1_Action
+[ActionWorkWithValue]
+SnapshotIndex=I1_ActionWorkWithValue
+[Action_for_tests_work_with_VuGen]
+SnapshotIndex=I1_Action_for_tests_work_with_VuGen
+[vuser_end]
+SnapshotIndex=I1_vuser_end

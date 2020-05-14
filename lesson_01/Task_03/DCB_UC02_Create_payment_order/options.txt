@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\aiteco\lessons\lesson_01\Task_03\DCB_UC02_Create_payment_order
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ee:\aiteco\lessons\lesson_01\task_03\dcb_uc02_create_payment_order\\logfile.log
+e:\aiteco\lessons\lesson_01\task_03\dcb_uc02_create_payment_order\\combined_DCB_UC02_Create_payment_order.c
+e:\aiteco\lessons\lesson_01\task_03\dcb_uc02_create_payment_order\\pre_cci.c

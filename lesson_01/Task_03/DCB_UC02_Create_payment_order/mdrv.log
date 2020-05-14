@@ -1,0 +1,33 @@
+Warning: Failed to post to 'http://127.0.0.1:8182/shunra/api/emulation/packetCaptureOnly', retcode=7.
+Warning: Failed to start NV emulation. Perhaps the NV server is not working, and therefore a NV report will not be generated.
+Virtual User Script started at: 14.05.2020 8:23:41
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.55.0 for Windows 10; build 911 (июл 24 2017 19:46:00)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0  	[MsgId: MMSG-26988]
+Run-Time Settings file: "E:\aiteco\lessons\lesson_01\Task_03\DCB_UC02_Create_payment_order\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 2  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(6): Notify: Saving Parameter "UC = DCB_UC02".
+Action.c(16): Notify: Transaction "_{UC}_Создание_ПП" started.
+Action.c(16): Warning: Failed to get NV emulation handle.
+create.c(7): Notify: Saving Parameter "nds = 0".
+create.c(9): Notify: Transaction "{UC}_06_Вкладка_платежи_и_переводы" started.
+create.c(9): Warning: Failed to get NV emulation handle.
+create.c(11): web_url("statistics_3") started  	[MsgId: MMSG-26355]
+create.c(11): Warning: The string 'balancedHost' with parameter delimiters is not a parameter.
+create.c(11): Warning: The string 'balancedHost' with parameter delimiters is not a parameter.
+create.c(11): Warning -27794: Could not resolve address of host {balancedhost}  	[MsgId: MWAR-27794]
+create.c(11): web_url("statistics_3") highest severity level was "warning", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+create.c(18): Error: C interpreter run time error: create.c (18):  Error -- Unresolved symbol : save_error.
+Notify: Transaction "{UC}_06_Вкладка_платежи_и_переводы" ended with a "Stop" status (Duration: 1,9337 Wasted Time: 0,1994).
+Notify: Transaction "_{UC}_Создание_ПП" ended with a "Stop" status (Duration: 1,9366 Wasted Time: 0,1994).
+Action was aborted.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 2124), ended OK."

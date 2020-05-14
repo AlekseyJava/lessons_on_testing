@@ -1,0 +1,3 @@
+host,port,channel,queue,SBBOLSystemID
+10.68.35.205,1419,SC.SBBOL,ESB.SBBOL.OUT,urn:sbrfsystems:99-sbbol
+10.68.35.205,1419,SC.SBBOL,ESB.SBBOL2.OUT,urn:sbrfsystems:99-sbbol2
