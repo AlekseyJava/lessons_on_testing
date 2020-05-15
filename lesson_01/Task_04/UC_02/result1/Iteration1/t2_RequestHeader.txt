@@ -1,0 +1,11 @@
+GET /letter.php?charkod=202 HTTP/1.1
+Referer: http://slovardalja.net/
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept: */*
+Connection: Keep-Alive
+Host: slovardalja.net
+Cookie: __utma=196215790.657020300.1589556729.1589556729.1589556729.1; __utmc=196215790; __utmz=196215790.1589556729.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); __gads=ID=e00f22fd17b91716:T=1589556730:S=ALNI_MaKKiQsabpquzlTWZDvT2Pmduuo2w; fid=6c551876-6878-4776-9b41-aba7bf111072
+

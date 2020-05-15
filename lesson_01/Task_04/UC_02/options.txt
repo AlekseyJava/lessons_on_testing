@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\aiteco\lessons\lesson_01\Task_04\UC_02
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ee:\aiteco\lessons\lesson_01\task_04\uc_02\\logfile.log
+e:\aiteco\lessons\lesson_01\task_04\uc_02\\combined_UC_02.c
+e:\aiteco\lessons\lesson_01\task_04\uc_02\\pre_cci.c
