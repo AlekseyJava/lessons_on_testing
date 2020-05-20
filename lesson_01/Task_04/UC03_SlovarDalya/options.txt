@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\aiteco\lessons\lesson_01\Task_04\UC03_SlovarDalya
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ee:\aiteco\lessons\lesson_01\task_04\uc03_slovardalya\\logfile.log
+e:\aiteco\lessons\lesson_01\task_04\uc03_slovardalya\\combined_UC03_SlovarDalya.c
+e:\aiteco\lessons\lesson_01\task_04\uc03_slovardalya\\pre_cci.c

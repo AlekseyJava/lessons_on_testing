@@ -1,0 +1,78 @@
+Virtual User Script started at: 20.05.2020 10:33:53
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.55.0 for Windows 10; build 911 (июл 24 2017 19:46:00)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36  	[MsgId: MMSG-26988]
+Run-Time Settings file: "E:\aiteco\lessons\lesson_01\Task_04\UC03_SlovarDalya\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(5): Notify: Transaction "01_MainPage" started.
+Action.c(7): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+Action.c(7): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+Action.c(22): web_url("slovardalja.net") started  	[MsgId: MMSG-26355]
+Action.c(22): Found resource "http://slovardalja.net/style.css" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://any.realbig.media/ip2w.min.js" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://counter.rambler.ru/top100.cnt?1439171" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://slovardalja.net/img/Header.jpg" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://slovardalja.net/img/endpic.jpg" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://cdn-rtb.sape.ru/teasers/js/471/2/53471.js" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://pagead2.googlesyndication.com/pagead/show_ads.js" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): Found resource "http://www.google-analytics.com/urchin.js" in HTML "http://slovardalja.net/"  	[MsgId: MMSG-26659]
+Action.c(22): web_url("slovardalja.net") was successful, 126807 body bytes, 4462 header bytes, 26 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(38): Notify: Transaction "01_MainPage" ended with a "Pass" status (Duration: 1.8926 Wasted Time: 0.2807).
+Action.c(44): Notify: Transaction "02_PressLetter" started.
+Action.c(46): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(46): Warning -26590: web_remove/revert_auto_header for "Origin" had no effect  	[MsgId: MWAR-26590]
+Action.c(46): web_remove/revert_auto_header("Origin") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(48): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+Action.c(48): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+Action.c(53): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Action.c(53): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(62): web_url("letter.php") started  	[MsgId: MMSG-26355]
+Action.c(62): Resource "http://slovardalja.net/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://any.realbig.media/ip2w.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Found resource "http://counter.rambler.ru/top100.cnt?1439171" in HTML "http://slovardalja.net/letter.php?charkod=204"  	[MsgId: MMSG-26659]
+Action.c(62): Resource "http://slovardalja.net/img/Header.jpg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://slovardalja.net/img/endpic.jpg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://cdn-rtb.sape.ru/teasers/js/471/2/53471.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://pagead2.googlesyndication.com/pagead/show_ads.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): Resource "http://www.google-analytics.com/urchin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(62): web_url("letter.php") was successful, 9924 body bytes, 661 header bytes  	[MsgId: MMSG-26386]
+Action.c(78): Notify: Transaction "02_PressLetter" ended with a "Pass" status (Duration: 0.7337 Wasted Time: 0.1373).
+Action.c(84): Notify: Transaction "03_PressWord" started.
+Action.c(86): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(86): Warning -26590: web_remove/revert_auto_header for "Origin" had no effect  	[MsgId: MWAR-26590]
+Action.c(86): web_remove/revert_auto_header("Origin") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(88): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+Action.c(88): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+Action.c(91): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Action.c(91): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(100): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Action.c(100): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(109): web_url("word.php") started  	[MsgId: MMSG-26355]
+Action.c(109): Resource "http://slovardalja.net/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://any.realbig.media/ip2w.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Found resource "http://counter.rambler.ru/top100.cnt?1439171" in HTML "http://slovardalja.net/word.php?wordid=15298"  	[MsgId: MMSG-26659]
+Action.c(109): Resource "http://slovardalja.net/img/Header.jpg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://slovardalja.net/img/endpic.jpg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://cdn-rtb.sape.ru/teasers/js/471/2/53471.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://pagead2.googlesyndication.com/pagead/show_ads.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): Resource "http://www.google-analytics.com/urchin.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(109): web_url("word.php") was successful, 2287 body bytes, 661 header bytes  	[MsgId: MMSG-26386]
+Action.c(118): Notify: Transaction "03_PressWord" ended with a "Pass" status (Duration: 0.7817 Wasted Time: 0.1194).
+Action.c(120): id буквы: 204
+Action.c(122): id слова: 15298
+Action.c(124): слово: ћјЅ”ƒ№  
+Action.c(126): слово: ћјЅ”ƒ№  нареч. южн. зап. может быть, станетс€.
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
