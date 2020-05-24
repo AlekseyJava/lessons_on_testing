@@ -15,6 +15,7 @@
     <FileEntry Name="DfeConfig\" Filter="4" />
     <FileEntry Name="DCB_UC02_Create_payment_order.prm" Filter="2" />
     <FileEntry Name="globals.h" Filter="2" />
+    <FileEntry Name="resolve_host.c" Filter="2" />
     <FileEntry Name="login.c" Filter="2" />
     <FileEntry Name="logout.c" Filter="2" />
     <FileEntry Name="combined_DCB_UC02_Create_payment_order.c" Filter="2" />
@@ -50,9 +51,10 @@
     <FileEntry Name="options.txt" Filter="1" />
     <FileEntry Name="output.bak" Filter="1" />
     <FileEntry Name="output.txt" Filter="1" />
-    <FileEntry Name="replay.har" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="shunra.shunra" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
     <FileEntry Name="UserTasks.xml" Filter="1" />
     <FileEntry Name="result1\" Filter="1" />
   </GeneralFiles>

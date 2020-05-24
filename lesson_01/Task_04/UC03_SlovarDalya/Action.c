@@ -1,25 +1,24 @@
 Action()
 {
 	int id = 0;
-
+	int random_letter_id = 0;
+	int count;
+	int word_id;
+	int new_word_id;
+	
+	//переход на главную страницу сайта словаря Даля
 	lr_start_transaction("01_MainPage");
 	
-	web_add_header("Upgrade-Insecure-Requests", 
-		"1");
-
-//	web_add_cookie("__utma=196215790.633335759.1589944572.1589944572.1589944572.1; DOMAIN=slovardalja.net");
-//
-//	web_add_cookie("__utmb=196215790; DOMAIN=slovardalja.net");
-//
-//	web_add_cookie("__utmc=196215790; DOMAIN=slovardalja.net");
-//
-//	web_add_cookie("__utmz=196215790.1589944572.1.1.utmccn=(direct)|utmcsr=(direct)|utmcmd=(none); DOMAIN=slovardalja.net");
-//
-//	web_add_cookie("__gads=ID=fe15cf4a3b9a8992:T=1589944572:S=ALNI_MYSuNkr_YSJGY0TxpiWnntFB-vrBA; DOMAIN=slovardalja.net");
-//
-//	web_add_cookie("fid=2897f844-3a02-4b6a-89c9-107ec0cb217b; DOMAIN=slovardalja.net");
-
-	web_url("slovardalja.net", 
+	web_reg_save_param_ex(
+    "ParamName=letter", 
+    "LB/IC=charkod\=",
+    "RB/IC='>",
+    "Ordinal=All",
+    SEARCH_FILTERS,
+        "Scope=Body",
+	LAST);
+	
+	web_url("slovardalja.net",
 		"URL=http://slovardalja.net/", 
 		"Resource=0", 
 		"RecContentType=text/html", 
@@ -34,6 +33,12 @@ Action()
 //		"Url=http://tpc.googlesyndication.com/sodar/sodar2.js", ENDITEM, 
 //		"Url=/favicon.ico", ENDITEM, 
 		LAST);
+	
+	//letter_id random parametr из массива letter	
+	lr_save_string(lr_paramarr_random("letter"), "letter_id");
+	
+	//печать letter_id
+	//lr_output_message(lr_eval_string(""));
 
 	lr_end_transaction("01_MainPage", LR_AUTO);
 
@@ -43,18 +48,16 @@ Action()
 	
 	lr_start_transaction("02_PressLetter");
 
-	web_revert_auto_header("Origin");
-
-	web_add_header("Upgrade-Insecure-Requests", 
-		"1");
-
-	//letter_id random 192-223(от А до Я)
+//	web_revert_auto_header("Origin");
+//
+//	web_add_header("Upgrade-Insecure-Requests", 
+//		"1");
 	
 	web_reg_save_param_ex(
     "ParamName=word_id", 
     "LB/IC=wordid\=",
     "RB/IC='><strong>",
-    "Ordinal=1",
+    "Ordinal=All",
     SEARCH_FILTERS,
         "Scope=Body",
 	LAST);
@@ -68,19 +71,34 @@ Action()
 		"Mode=HTML", 
 		LAST);
 	
-	//lr_output_message(lr_eval_string("{word_id}"));
-	//id = word_id;
+	//lr_output_message(lr_eval_string("{word_id_count}"));
 	
-	//как взять массив из snapshot??
-	//lr_output_message("%d", id);
+	count = atoi(lr_eval_string("{word_id_count}"));
 	
-	//	функция преобразования строку в число??
+	word_id = atoi(lr_eval_string("{word_id_1}"));
+	
+	//lr_output_message("количество слов - с этой буквой %d, первое слово %d", count, word_id);
+	
+	lr_save_int(count, "count_words");
+	
+	//lr_output_message(lr_eval_string("{count_words}"));
+	
+	if(count>1) {
+		new_word_id = word_id + ((rand()%count)/2)*2 + 1;
+	}
+	else(new_word_id = word_id);
+	
+	lr_output_message("случайное новое слово %d", new_word_id);
+	
+	lr_save_int(new_word_id, "random_word");
+	
+	lr_output_message(lr_eval_string("{random_word}"));
 
 	lr_end_transaction("02_PressLetter", LR_AUTO);
 	
 	lr_think_time(10);
 	
-	/* Нажатие на 12 слово (КАВЫГЛАЗ) */
+	/* Нажатие на случайное четное слово */
 	
 	lr_start_transaction("03_PressWord");
 
@@ -89,10 +107,12 @@ Action()
 	web_add_header("Upgrade-Insecure-Requests", 
 		"1");
 	
+	web_set_max_html_param_len("30000");
+	
 web_reg_save_param_ex(
     "ParamName=word", 
-    "LB/IC= словарная статья, ",
-    "RB/IC=\">",
+    "LB= словарная статья, ",
+    "RB=\">",
     "Ordinal=1",
     SEARCH_FILTERS,
         "Scope=All",
@@ -100,15 +120,16 @@ web_reg_save_param_ex(
 	
 	web_reg_save_param_ex(
     "ParamName=word_znachenie", 
-    "LB/IC=</p><p>",
-    "RB/IC=</p>",
+    "LB=</strong></p><p>",
+  	"RB=</p>",
     "Ordinal=1",
     SEARCH_FILTERS,
         "Scope=Body",
 	LAST);
 	
 	web_url("word.php", 
-        "URL=http://slovardalja.net/word.php?wordid={word_id}",
+        "URL=http://slovardalja.net/word.php?wordid={random_word}",
+        //"URL=http://slovardalja.net/word.php?wordid=44010",
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=http://slovardalja.net/letter.php?charkod={letter_id}", 
@@ -118,15 +139,12 @@ web_reg_save_param_ex(
 	
 	lr_end_transaction("03_PressWord", LR_AUTO);
 	
-	lr_output_message(lr_eval_string("id буквы: {letter_id}"));
-
-	lr_output_message(lr_eval_string("id слова: {word_id}"));
+//	lr_output_message(lr_eval_string("id буквы: "));
 	
 	lr_output_message(lr_eval_string("слово: {word}"));
 	
 	lr_output_message(lr_eval_string("значение слова: {word_znachenie}"));
-	
-	
+
 	/* Остановка записи скрипта */
 
 	return 0;

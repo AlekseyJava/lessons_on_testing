@@ -55,8 +55,8 @@ Order="01_MainPage__*delimiter*__02_PressLetter__*delimiter*__03_PressWord"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
-LastReplayedRunName=result1
-ActiveRunName=result1
+LastReplayedRunName=
+ActiveRunName=
 [Transactions]
 01_MainPage=
 02_PressLetter=

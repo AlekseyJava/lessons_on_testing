@@ -1,17 +1,16 @@
 Action()
 {
 
-	//resolve_host();
+	resolve_host();
 
 	lr_save_string("DCB_UC02","UC");
 
-	//cacheDownload(); 
+	cacheDownload(); 
 
-//	login();
+	login();
 
 
 	lr_think_time(atoi("{thinktime}"));
-
 
 		lr_start_transaction("_{UC}_Создание_ПП");
 
@@ -22,8 +21,7 @@ Action()
 		lr_think_time(atoi("{thinktime}"));
 
 
-	//logout();
-
+	logout();
 
     return 0;
 }

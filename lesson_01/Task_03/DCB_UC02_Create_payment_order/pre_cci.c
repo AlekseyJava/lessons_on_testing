@@ -3024,6 +3024,13 @@ logout()
 }
 # 10 "globals.h" 2
 
+# 1 "resolve_host.c" 1
+resolve_host()
+{
+	return 0;
+}
+# 11 "globals.h" 2
+
  
  
 
@@ -3050,17 +3057,16 @@ vuser_init()
 Action()
 {
 
-	 
+	resolve_host();
 
 	lr_save_string("DCB_UC02","UC");
 
 	 
 
- 
+	login();
 
 
 	lr_think_time(atoi("{thinktime}"));
-
 
 		lr_start_transaction("_{UC}_Создание_ПП");
 
@@ -3071,8 +3077,7 @@ Action()
 		lr_think_time(atoi("{thinktime}"));
 
 
-	 
-
+	logout();
 
     return 0;
 }

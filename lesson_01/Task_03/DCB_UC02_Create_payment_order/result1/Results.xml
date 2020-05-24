@@ -135,7 +135,7 @@
 <Res><![CDATA[result1]]></Res>
 <Action rID="T2">
 <AName><![CDATA[vuser_init]]></AName>
-<Summary sTime="14.05.2020 - 8:23:41" eTime="14.05.2020 - 8:23:41" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="21.05.2020 - 15:45:20" eTime="21.05.2020 - 15:45:20" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="5" >
 <Disp><![CDATA[vuser_init Summary]]></Disp>
 </NodeArgs>
@@ -144,43 +144,43 @@
 <Action rID="T4">
 <AName><![CDATA[Action]]></AName>
 <Step rID="T5">
-<Obj plainTxt="False" ><![CDATA[Url: statistics_3]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[14.05.2020 - 8:23:41]]></Time>
-<TimeTick>1589430221</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
-<Disp><![CDATA[Url: statistics_3]]></Disp>
+<Obj plainTxt="False" ><![CDATA[Url: login.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Step failed</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[21.05.2020 - 15:45:20]]></Time>
+<TimeTick>1590061520</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" status="Failed" >
+<Disp><![CDATA[Url: login.html]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t1.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Summary sTime="14.05.2020 - 8:23:41" eTime="14.05.2020 - 8:23:43" passed="1" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
-<Disp><![CDATA[Action Summary]]></Disp>
-</NodeArgs>
-</Action>
 <Step rID="T6">
 <Obj plainTxt="False" ><![CDATA[Script Aborted!]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Failed</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[14.05.2020 - 8:23:43]]></Time>
-<TimeTick>1589430223</TimeTick>
-<NodeArgs eType="General" icon="1" nRep="11" status="Failed" >
+<Time><![CDATA[21.05.2020 - 15:45:20]]></Time>
+<TimeTick>1590061520</TimeTick>
+<NodeArgs eType="General" icon="1" nRep="10" status="Failed" >
 <Disp><![CDATA[Script Aborted!]]></Disp>
 </NodeArgs>
 </Step>
-<Action rID="T7">
-<AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="14.05.2020 - 8:23:43" eTime="14.05.2020 - 8:23:43" passed="0" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="12" >
-<Disp><![CDATA[vuser_end Summary]]></Disp>
+<Summary sTime="21.05.2020 - 15:45:20" eTime="21.05.2020 - 15:45:20" passed="0" failed="2" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Failed" >
+<Disp><![CDATA[Action Summary]]></Disp>
 </NodeArgs>
 </Action>
 <NodeArgs eType="StartIteration" icon="3" nRep="7" status="Failed" >
 <Disp><![CDATA[DCB_UC02_Create_payment_order Iteration 1 (Row 1)]]></Disp>
 </NodeArgs>
 </DIter>
-<Summary sTime="14.05.2020 - 8:23:38" eTime="14.05.2020 - 8:23:43" passed="1" failed="1" warnings="0" ></Summary>
+<Action rID="T7">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="21.05.2020 - 15:45:20" eTime="21.05.2020 - 15:45:20" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="13" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="21.05.2020 - 15:45:17" eTime="21.05.2020 - 15:45:21" passed="0" failed="2" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Failed" >
 <Disp><![CDATA[Test DCB_UC02_Create_payment_order Summary]]></Disp>
 </NodeArgs>

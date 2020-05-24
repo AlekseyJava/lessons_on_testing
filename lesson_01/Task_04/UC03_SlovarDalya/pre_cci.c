@@ -2598,25 +2598,26 @@ vuser_init()
 Action()
 {
 	int id = 0;
-
+	int random_letter_id = 0;
+	int count;
+	int word_id;
+	int new_word_id;
+	
+	
+	
+	 
 	lr_start_transaction("01_MainPage");
 	
-	web_add_header("Upgrade-Insecure-Requests", 
-		"1");
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-	web_url("slovardalja.net", 
+	web_reg_save_param_ex(
+    "ParamName=letter", 
+    "LB/IC=charkod\=",
+    "RB/IC='>",
+    "Ordinal=All",
+    "SEARCH_FILTERS",
+        "Scope=Body",
+	"LAST");
+	
+	web_url("slovardalja.net",
 		"URL=http://slovardalja.net/", 
 		"Resource=0", 
 		"RecContentType=text/html", 
@@ -2631,19 +2632,29 @@ Action()
  
  
 		"LAST");
+	
+	 
+	lr_save_string(lr_paramarr_random("letter"), "letter_id");
+	
+	 
+	 
 
 	lr_end_transaction("01_MainPage", 2);
 
 	lr_think_time(10);
 	
+	
+	
 	 
 	
 	lr_start_transaction("02_PressLetter");
 
-	(web_remove_auto_header("Origin", "ImplicitGen=Yes", "LAST"));
-
-	web_add_header("Upgrade-Insecure-Requests", 
-		"1");
+ 
+ 
+ 
+ 
+	
+ 
 
 	 
 	
@@ -2651,7 +2662,7 @@ Action()
     "ParamName=word_id", 
     "LB/IC=wordid\=",
     "RB/IC='><strong>",
-    "Ordinal=1",
+    "Ordinal=All",
     "SEARCH_FILTERS",
         "Scope=Body",
 	"LAST");
@@ -2666,15 +2677,31 @@ Action()
 		"LAST");
 	
 	 
-	 
 	
-	 
+	count = atoi(lr_eval_string("{word_id_count}"));
 	
-	 
+	word_id = atoi(lr_eval_string("{word_id_1}"));
+	
+	lr_output_message("количество слов - с этой буквой %d, первое слово %d", count, word_id);
+	
+	lr_save_int(count, "count_words");
+	
+	lr_output_message(lr_eval_string("{count_words}"));
+	
+	if(count>1) {
+		new_word_id = word_id + ((rand()%count)/2)*2 + 1;
+	}
+	else(new_word_id = word_id);
+	
+	lr_output_message("случайное новое слово %d", new_word_id);
+	
+	lr_save_int(new_word_id, "random_word");
+	
+	lr_output_message(lr_eval_string("{random_word}"));
 
 	lr_end_transaction("02_PressLetter", 2);
-	
-	lr_think_time(10);
+ 
+ 
 	
 	 
 	
@@ -2685,10 +2712,12 @@ Action()
 	web_add_header("Upgrade-Insecure-Requests", 
 		"1");
 	
+	web_set_max_html_param_len("30000");
+	
 web_reg_save_param_ex(
     "ParamName=word", 
-    "LB/IC= словарная статья, ",
-    "RB/IC=\">",
+    "LB= словарная статья, ",
+    "RB=\">",
     "Ordinal=1",
     "SEARCH_FILTERS",
         "Scope=All",
@@ -2696,15 +2725,18 @@ web_reg_save_param_ex(
 	
 	web_reg_save_param_ex(
     "ParamName=word_znachenie", 
-    "LB/IC=</p><p>",
-    "RB/IC=</p>",
+    "LB=</strong></p><p>",
+   
+   
+  	"RB=</p>",
     "Ordinal=1",
     "SEARCH_FILTERS",
         "Scope=Body",
 	"LAST");
 	
 	web_url("word.php", 
-        "URL=http://slovardalja.net/word.php?wordid={word_id}",
+        "URL=http://slovardalja.net/word.php?wordid={random_word}",
+         
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=http://slovardalja.net/letter.php?charkod={letter_id}", 
@@ -2714,15 +2746,12 @@ web_reg_save_param_ex(
 	
 	lr_end_transaction("03_PressWord", 2);
 	
-	lr_output_message(lr_eval_string("id буквы: {letter_id}"));
-
-	lr_output_message(lr_eval_string("id слова: {word_id}"));
+ 
 	
 	lr_output_message(lr_eval_string("слово: {word}"));
 	
-	lr_output_message(lr_eval_string("слово: {word_znachenie}"));
-	
-	
+	lr_output_message(lr_eval_string("значение слова: {word_znachenie}"));
+
 	 
 
 	return 0;

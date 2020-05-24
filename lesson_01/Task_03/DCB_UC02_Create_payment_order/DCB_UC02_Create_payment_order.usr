@@ -59,6 +59,7 @@ vuser_end=cci
 [ManuallyExtraFiles]
 login.c=
 logout.c=
+resolve_host.c=
 [ProtocolsVersion]
 QTWeb=11.0.0.0
 [RunLogicFiles]
